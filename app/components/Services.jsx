@@ -14,7 +14,7 @@ const ICON_STYLES = [
 
 const Services = () => {
   return (
-    <section id="services" className="w-full px-[12%] py-16 scroll-mt-20">
+    <section id="services" className="w-full px-12 py-16 scroll-mt-20">
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold text-gray-800">My Services</h2>
         <p className="max-w-2xl mx-auto mt-5 text-gray-600">

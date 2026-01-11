@@ -71,7 +71,7 @@ export const PROJECTS_DATA = [
     title: "Portfolio Website",
     description:
       "A React portfolio highlighting skills, projects, and experience with a dynamic design.",
-    image: "/1.jpeg",
+    image: "/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl:
@@ -102,11 +102,11 @@ export const PROJECTS_DATA = [
     id: 4,
     title: "E-Commerce Website",
     description:
-      "An online platform for publishing and sharing articles, insights, and stories on various topics.",
+      "A responsive jewellery e-commerce site with product browsing, cart, wishlist, and smooth user experience across devices.",
     image: "/4.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "http://jewellery-store-six.vercel.app",
   },
   {
     id: 5,

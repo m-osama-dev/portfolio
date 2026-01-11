@@ -20,7 +20,7 @@ const Project = () => {
   );
 
   return (
-    <section id="projects" className="w-full px-[12%] py-16 scroll-mt-20">
+    <section id="projects" className="w-full px-12 py-16 scroll-mt-20">
       <h2 className="text-center text-4xl font-bold text-gray-800 mt-6 mb-12">
         My Projects
       </h2>

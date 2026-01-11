@@ -12,15 +12,18 @@ const variants = {
 
 const About = () => {
   const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
     startTransition(() => setTab(id));
   };
 
   return (
-    <section id="about" className="container mt-10 mx-auto px-12 py-4">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+    <section
+      id="about"
+      className="w-full px-12 py-16 scroll-mt-20"
+    >
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         {/* Left Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -32,7 +35,7 @@ const About = () => {
             width={500}
             height={400}
             alt="about image"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-full h-auto"
           />
         </motion.div>
 
@@ -41,9 +44,11 @@ const About = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mt-4 md:mt-0 text-left flex flex-col h-full"
+          className="text-left flex flex-col h-full"
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            About Me
+          </h2>
 
           <p className="text-base lg:text-lg text-gray-600">
             I'm a Frontend Developer with expertise in JavaScript, React.js, and
@@ -53,7 +58,7 @@ const About = () => {
           </p>
 
           {/* Tabs */}
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row mt-8">
             {TAB_DATA.map(({ id, title }) => (
               <button key={id} onClick={() => handleTabChange(id)}>
                 <p
@@ -69,7 +74,7 @@ const About = () => {
                   animate={tab === id ? "active" : "default"}
                   variants={variants}
                   className="h-1 bg-[#00adb5] mt-2 mr-3 rounded"
-                ></motion.div>
+                />
               </button>
             ))}
           </div>
